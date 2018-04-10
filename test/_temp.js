@@ -1,12 +1,12 @@
 const expect = require('expect.js');
 
-describe('63.unique-paths-ii', function () {
-    const uniquePathsWithObstacles = require('../src/63.unique-paths-ii');
-    it('grid [[0,0,0],[0,1,0],[0,0,0]], return 2', function () {
+describe('64.minimum-path-sum', function () {
+    const minPathSum = require('../src/64.minimum-path-sum');
+    it('grid [[1,3,1],[1,5,1],[4,2,1]], return 7', function () {
         let target = [
-            [0, 0, 0], 
-            [0, 1, 0], 
-            [0, 0, 0]];
-        expect(uniquePathsWithObstacles(target)).to.eql(2);
+            [1,3,1],
+            [1,5,1],
+            [4,2,1]];
+        expect(minPathSum(target)).to.eql(7);
     });
 });
