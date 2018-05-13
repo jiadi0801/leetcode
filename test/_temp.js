@@ -4,38 +4,10 @@ describe('73.set-matrix-zeroes', function () {
     it('should learn more');
 });
 
-describe('79.word-search', function () {
-    const exist = require('../src/79.word-search');
-    it('board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]] word = ABCCED, return true', function () {
-        board = [
-            ['A', 'B', 'C', 'E'],
-            ['S', 'F', 'C', 'S'],
-            ['A', 'D', 'E', 'E']
-        ]
-        let word = 'ABCCED';
-        expect(exist(board, word)).to.eql(true);
-    });
-    it('board = [["A","B","C","E"]] word = BCE, return true', function () {
-        board = [
-            ['A', 'B', 'C', 'E']
-        ]
-        let word = 'BCE';
-        expect(exist(board, word)).to.eql(true);
-    });
-    it('board = [["A","B","C","E"]] word = ECB, return true', function () {
-        board = [
-            ['A', 'B', 'C', 'E']
-        ]
-        let word = 'ECB';
-        expect(exist(board, word)).to.eql(true);
-    });
-    it('board = [["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]] word = ABCEFSADEESE, return true', function () {
-        board = [
-            ["A", "B", "C", "E"],
-            ["S", "F", "E", "S"],
-            ["A", "D", "E", "E"]
-        ];
-        let word = 'ABCEFSADEESE';
-        expect(exist(board, word)).to.eql(true);
+describe('80.remove-duplicates-from-sorted-array-ii', function () {
+    const removeDuplicates = require('../src/80.remove-duplicates-from-sorted-array-ii');
+    it('nums = [0,0,1,1,1,1,2,3,3], return 7', function () {
+        let nums = [0,0,1,1,1,1,2,3,3];
+        expect(removeDuplicates(nums)).to.eql(7);
     });
 });
