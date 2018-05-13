@@ -3,6 +3,15 @@
  * @return {number}
  */
 var removeDuplicates = function(nums) {
+    // discuss中天才实现C++：
+    // int removeDuplicates(vector<int>& nums) {
+    //     int i = 0;
+    //     for (int n : nums)
+    //         if (i < 2 || n > nums[i-2])
+    //             nums[i++] = n;
+    //     return i;
+    // }
+
     if (nums.length === 0) return 0;
 
     // 遍历指针
