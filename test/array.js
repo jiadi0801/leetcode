@@ -140,3 +140,48 @@ describe('74.search-a-2d-matrix', function () {
         expect(searchMatrix(matrix, target)).to.eql(false);
     });
 });
+
+describe('78.subsets', function () {
+    const subsets = require('../src/78.subsets');
+    it('nums = [1,2,3], return [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]', function () {
+        let nums = [1,2,3];
+        let result = [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]];
+        expect(subsets(nums)).to.eql(result);
+    });
+});
+
+describe('79.word-search', function () {
+    const exist = require('../src/79.word-search');
+    it('board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]] word = ABCCED, return true', function () {
+        board = [
+            ['A', 'B', 'C', 'E'],
+            ['S', 'F', 'C', 'S'],
+            ['A', 'D', 'E', 'E']
+        ]
+        let word = 'ABCCED';
+        expect(exist(board, word)).to.eql(true);
+    });
+    it('board = [["A","B","C","E"]] word = BCE, return true', function () {
+        board = [
+            ['A', 'B', 'C', 'E']
+        ]
+        let word = 'BCE';
+        expect(exist(board, word)).to.eql(true);
+    });
+    it('board = [["A","B","C","E"]] word = ECB, return true', function () {
+        board = [
+            ['A', 'B', 'C', 'E']
+        ]
+        let word = 'ECB';
+        expect(exist(board, word)).to.eql(true);
+    });
+    it('board = [["A","B","C","E"],["S","F","E","S"],["A","D","E","E"]] word = ABCEFSADEESE, return true', function () {
+        board = [
+            ["A", "B", "C", "E"],
+            ["S", "F", "E", "S"],
+            ["A", "D", "E", "E"]
+        ];
+        let word = 'ABCEFSADEESE';
+        expect(exist(board, word)).to.eql(true);
+    });
+});
