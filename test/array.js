@@ -83,8 +83,8 @@ describe('59.spiral-matrix-ii', function () {
     const generateMatrix = require('../src/59.spiral-matrix-ii');
     it('n: 3, return [[1,2,3],[8,9,4],[7,6,5]]', function () {
         let target = [
-            [1, 2, 3], 
-            [8, 9, 4], 
+            [1, 2, 3],
+            [8, 9, 4],
             [7, 6, 5]];
         expect(generateMatrix(3)).to.eql(target);
     });
@@ -94,8 +94,8 @@ describe('63.unique-paths-ii', function () {
     const uniquePathsWithObstacles = require('../src/63.unique-paths-ii');
     it('grid [[0,0,0],[0,1,0],[0,0,0]], return 2', function () {
         let target = [
-            [0, 0, 0], 
-            [0, 1, 0], 
+            [0, 0, 0],
+            [0, 1, 0],
             [0, 0, 0]];
         expect(uniquePathsWithObstacles(target)).to.eql(2);
     });
@@ -204,5 +204,17 @@ describe('81.search-in-rotated-sorted-array-ii', function () {
     it('nums = [2,5,6,0,0,1,2], target = 3, should return false', function () {
         let nums = [2,5,6,0,0,1,2], target = 3;
         expect(search(nums, target)).to.eql(false);
+    });
+});
+
+describe('209.minimum-size-subarray-sum', function () {
+    const {test} = require('../src/209.minimum-size-subarray-sum');
+    it('nums = [2,3,1,2,4,3], target = 7, should return 2', function () {
+        let nums = [2,3,1,2,4,3], target = 7;
+        expect(test(target, nums)).to.eql(2);
+    });
+    it('nums = [2,3,1,2,4,3], target = 100, should return 0', function () {
+        let nums = [2,3,1,2,4,3], target = 100;
+        expect(test(target, nums)).to.eql(0);
     });
 });

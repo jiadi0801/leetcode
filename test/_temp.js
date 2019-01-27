@@ -4,14 +4,14 @@ describe('73.set-matrix-zeroes', function () {
     it('should learn more');
 });
 
-describe('81.search-in-rotated-sorted-array-ii', function () {
-    const search = require('../src/81.search-in-rotated-sorted-array-ii');
-    it('nums = [2,5,6,0,0,1,2], target = 0, should return true', function () {
-        let nums = [2,5,6,0,0,1,2], target = 0;
-        expect(search(nums, target)).to.eql(true);
+describe('209.minimum-size-subarray-sum', function () {
+    const {test} = require('../src/209.minimum-size-subarray-sum');
+    it('nums = [2,3,1,2,4,3], target = 7, should return 2', function () {
+        let nums = [2,3,1,2,4,3], target = 7;
+        expect(test(target, nums)).to.eql(2);
     });
-    it('nums = [2,5,6,0,0,1,2], target = 3, should return false', function () {
-        let nums = [2,5,6,0,0,1,2], target = 3;
-        expect(search(nums, target)).to.eql(false);
+    it('nums = [2,3,1,2,4,3], target = 100, should return 0', function () {
+        let nums = [2,3,1,2,4,3], target = 100;
+        expect(test(target, nums)).to.eql(0);
     });
 });
